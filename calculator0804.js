@@ -1,19 +1,19 @@
-class Add{
+var add = class Add{
     operate(numberA, numberB){
         return Number(numberA) + Number(numberB);
     }
 }
-class Sub{
+var sub = class Sub{
     operate(numberA, numberB){
         return Number(numberA) - Number(numberB);
     }
 }
-class Multi{
+var multi = class Multi{
     operate(numberA, numberB){
         return Number(numberA) * Number(numberB);
     }
 }
-class Div{
+var div = class Div{
     operate(numberA, numberB){
         if(Number(numberB)== 0){
             console.log("Division By Zero");
@@ -23,10 +23,9 @@ class Div{
         }
     }
 }
-var somethingToExports = {
-    Add: Add,
-    Sub: Sub,
-    Multi: Multi,
-    Div: Div
-}
-module.exports = somethingToExports;
+
+exports.sub = sub;
+exports.add = add;
+exports.multi = multi;
+exports.div = div;
+
